@@ -109,121 +109,168 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-16 z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="reveal active">
-                <div
-                    class="inline-block mb-4 px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-                    <i class="fas fa-graduation-cap mr-2"></i>Cursando Análise e Desenvolvimento de Sistemas
-                </div>
 
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    Rômulo <span class="gradient-text">Neto</span><br>
-                    <span class="text-3xl md:text-5xl text-gray-600 dark:text-gray-400" id="typing-text"></span>
-                </h1>
-
-                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
-                    Profissional em transição de carreira para tecnologia, unindo
-                    <span class="text-primary font-semibold">10+ anos de experiência técnica</span> com formação em
-                    Análise de Sistemas.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#experiencia"
-                        class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all">
-                        <i class="fas fa-briefcase mr-2"></i>Ver Experiência
-                    </a>
-                    <a href="#contato"
-                        class="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 rounded-full font-semibold hover:border-primary hover:text-primary transition-all">
-                        <i class="fas fa-envelope mr-2"></i>Entrar em Contato
-                    </a>
-                </div>
-
-                <div class="mt-12 flex justify-center space-x-6">
-                    <a href="https://www.linkedin.com/in/romulo-pereira-de-souza-neto/" target="_blank"
-                        class="text-2xl hover:text-primary transition-colors">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Rnetoo" target="_blank"
-                        class="text-2xl hover:text-primary transition-colors">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:romulo.psnw@gmail.com" class="text-2xl hover:text-primary transition-colors">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="tel:+5549999083606" class="text-2xl hover:text-primary transition-colors">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#sobre" class="text-gray-400 hover:text-primary transition-colors">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
-        </div>
-    </section>
 
     <!-- Sobre Section -->
     <section id="sobre" class="py-20 z-10 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="reveal order-2 md:order-1">
-                    <div class="relative">
+                    <div class="relative group">
+                        <!-- Anel gradiente animado -->
                         <div
-                            class="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl transform rotate-3 opacity-20">
+                            class="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse-slow">
                         </div>
+
+                        <!-- Container da foto -->
                         <div
-                            class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto bg-gradient-to-br from-primary to-secondary aspect-square flex items-center justify-center text-white text-9xl font-bold">
-                            RN
-                        </div>
-                        <div class="absolute -bottom-6 -right-6 glass p-4 rounded-xl shadow-lg">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                                <span class="text-sm font-semibold">Disponível para oportunidades</span>
+                            class="relative rounded-2xl overflow-hidden aspect-[3/4] max-w-md mx-auto ring-1 ring-gray-200 dark:ring-gray-700">
+                            <img src="assets/images/foto-perfil.png" alt="Rômulo Neto - Desenvolvedor em Formação"
+                                class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <!-- Fallback -->
+                            <div
+                                class="hidden w-full h-full bg-gradient-to-br from-primary to-secondary items-center justify-center text-white">
+                                <div class="text-center">
+                                    <span class="text-8xl font-bold block mb-2">RN</span>
+                                    <span class="text-sm opacity-80">Rômulo Neto</span>
+                                </div>
                             </div>
+
+                            <!-- Overlay com gradiente sutil -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                        </div>
+
+                        <!-- Badge flutuante -->
+                        <div
+                            class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 glass px-4 py-3 rounded-xl shadow-xl border border-primary/20">
+                            <div class="flex items-center space-x-2">
+                                <div class="relative flex h-3 w-3">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                                </div>
+                                <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">Open to Work</span>
+                            </div>
+                        </div>
+
+                        <!-- Elementos decorativos flutuantes -->
+                        <div
+                            class="absolute -top-4 -left-4 w-20 h-20 bg-primary/10 rounded-full blur-2xl animate-float">
+                        </div>
+                        <div
+                            class="absolute -bottom-8 left-1/4 w-16 h-16 bg-secondary/10 rounded-full blur-xl animate-float animation-delay-2000">
                         </div>
                     </div>
                 </div>
 
                 <div class="reveal order-1 md:order-2">
+                    <div
+                        class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Em Transição para Tecnologia</span>
+                    </div>
+
                     <h2 class="text-4xl font-bold mb-6">Sobre <span class="gradient-text">Mim</span></h2>
-                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                        Profissional com <strong>sólida experiência em ambientes técnicos e operacionais</strong>,
-                        atuando por mais de 10 anos com gestão de processos e atividades relacionadas, análise de
-                        informações,
-                        elaboração de relatórios técnicos e coordenação de equipes.
-                    </p>
-                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                        Desenvolvi ao longo da carreira <strong>forte capacidade analítica, organização estrutural
-                            e visão sistêmica</strong> de processos. Atualmente direciono minha trajetória para a área
-                        de
-                        <strong>Tecnologia</strong>, cursando Análise e Desenvolvimento de Sistemas.
+
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-5 leading-relaxed">
+                        Sou um profissional com trajetória consolidada em desenvolvimento de projetos, gestão de
+                        processos e controle operacional, atualmente em <strong>transição estruturada para a área de
+                            Tecnologia da Informação</strong>, com foco em Desenvolvimento Full Stack.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="glass p-4 rounded-xl text-center">
-                            <div class="text-3xl font-bold gradient-text mb-1">10+</div>
-                            <div class="text-sm text-gray-600 dark:text-gray-400">Anos de Experiência</div>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-5 leading-relaxed">
+                        Minha carreira foi construída em ambientes que exigem <strong>organização, análise, documentação
+                            técnica e responsabilidade na execução</strong>. Ao longo dos anos, atuei com planejamento
+                        de escopo, controle de prazos, padronização de processos e tomada de decisão orientada por dados
+                        — competências que hoje sustentam minha formação em desenvolvimento de software.
+                    </p>
+
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-5 leading-relaxed">
+                        Minha migração para TI representa um novo direcionamento profissional. Estou em processo
+                        contínuo de aprendizado técnico, aprofundando conhecimentos em <strong>desenvolvimento web,
+                            arquitetura de aplicações e boas práticas de código</strong>, ao mesmo tempo em que aplico
+                        esses conceitos na construção dos meus próprios projetos — incluindo este site.
+                    </p>
+
+                    <div class="glass p-6 rounded-xl border-l-4 border-primary mb-6 bg-primary/5">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            <i class="fas fa-lightbulb text-primary mr-2"></i>
+                            Reconheço que estou em evolução na área técnica, mas trago como diferencial
+                            <strong>maturidade profissional, disciplina, visão estruturada de projeto e compromisso com
+                                qualidade</strong>. Meu objetivo é integrar equipes onde eu possa contribuir com
+                            organização, responsabilidade e aprendizado constante, desenvolvendo-me como profissional de
+                            tecnologia de forma consistente.
+                        </p>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+                            <i class="fas fa-code text-primary mr-2"></i>Desenvolvimento Web
+                        </span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+                            <i class="fas fa-sitemap text-primary mr-2"></i>Arquitetura de Software
+                        </span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+                            <i class="fas fa-tasks text-primary mr-2"></i>Gestão de Projetos
+                        </span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+                            <i class="fas fa-chart-line text-primary mr-2"></i>Análise de Dados
+                        </span>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                        <div class="glass p-4 rounded-xl text-center group hover:bg-primary/5 transition-colors">
+                            <div
+                                class="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform">
+                                10+</div>
+                            <div class="text-xs text-gray-600 dark:text-gray-400">Anos Experiência</div>
                         </div>
-                        <div class="glass p-4 rounded-xl text-center">
-                            <div class="text-3xl font-bold gradient-text mb-1">3</div>
-                            <div class="text-sm text-gray-600 dark:text-gray-400">Formações Técnicas</div>
+                        <div class="glass p-4 rounded-xl text-center group hover:bg-primary/5 transition-colors">
+                            <div
+                                class="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform">
+                                ADS</div>
+                            <div class="text-xs text-gray-600 dark:text-gray-400">Em Formação</div>
                         </div>
-                        <div class="glass p-4 rounded-xl text-center">
-                            <div class="text-3xl font-bold gradient-text mb-1">ETA/ETE</div>
-                            <div class="text-sm text-gray-600 dark:text-gray-400">Gestão Ambiental</div>
+                        <div class="glass p-4 rounded-xl text-center group hover:bg-primary/5 transition-colors">
+                            <div
+                                class="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform">
+                                Full</div>
+                            <div class="text-xs text-gray-600 dark:text-gray-400">Stack (Objetivo)</div>
                         </div>
-                        <div class="glass p-4 rounded-xl text-center">
-                            <div class="text-3xl font-bold gradient-text mb-1">ADS</div>
-                            <div class="text-sm text-gray-600 dark:text-gray-400">Em Formação</div>
+                        <div class="glass p-4 rounded-xl text-center group hover:bg-primary/5 transition-colors">
+                            <div
+                                class="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform">
+                                SC</div>
+                            <div class="text-xs text-gray-600 dark:text-gray-400">Santa Catarina</div>
                         </div>
                     </div>
 
+                    <!-- Botões de ação -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="assets/docs/cv-romulo-neto.pdf" download
+                            class="inline-flex items-center justify-center space-x-2 px-6 py-3.5 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 transition-all duration-300 group">
+                            <i class="fas fa-file-download text-lg group-hover:animate-bounce"></i>
+                            <span>Download CV</span>
+                        </a>
+
+                        <a href="#portfolio"
+                            class="inline-flex items-center justify-center space-x-2 px-6 py-3.5 glass border-2 border-primary/30 text-primary dark:text-primary rounded-xl font-semibold hover:bg-primary/10 hover:border-primary hover:-translate-y-0.5 transition-all duration-300">
+                            <i class="fas fa-folder-open text-lg"></i>
+                            <span>Ver Projetos</span>
+                        </a>
+                    </div>
+
                     <div class="flex items-center space-x-4 text-gray-600 dark:text-gray-400">
-                        <i class="fas fa-map-marker-alt text-primary"></i>
+                        <i class="fas fa-map-marker-alt text-primary text-lg"></i>
                         <span>Balneário Piçarras, Santa Catarina</span>
                     </div>
                 </div>
