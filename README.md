@@ -1,2 +1,2 @@
-# portif-lio
-Para consultas públicas de meus projetos, ideias, desenvolvimento.
+# portifolio
+Para apresentação, consultas públicas de meus projetos, ideias e desenvolvimentos.
