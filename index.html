@@ -61,28 +61,55 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold gradient-text">&lt;Rômulo.N /&gt;</span>
+        <!-- Logo centralizado -->
+        <div
+            class="flex justify-center items-center py-3 border-b border-gray-200/50 dark:border-gray-700/50">
+            <a href="#home" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <div
+                    class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-xs font-mono shadow-md">
+                    <span>&lt;R.N/&gt;</span>
+                </div>
+                <span class="text-lg font-bold gradient-text">Rômulo.Neto</span>
+            </a>
+        </div>
+
+        <!-- Links de navegação + Botão idioma -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+            <div class="flex justify-between items-center h-12">
+                <!-- Links -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" data-i18n="nav-inicio"
+                        class="hover:text-primary transition-colors text-sm font-medium">Início</a>
+                    <a href="#sobre" data-i18n="nav-sobre"
+                        class="hover:text-primary transition-colors text-sm font-medium">Sobre</a>
+                    <a href="#experiencia" data-i18n="nav-experiencia"
+                        class="hover:text-primary transition-colors text-sm font-medium">Experiência</a>
+                    <a href="#formacao" data-i18n="nav-formacao"
+                        class="hover:text-primary transition-colors text-sm font-medium">Formação</a>
+                    <a href="#portfolio" data-i18n="nav-portfolio"
+                        class="hover:text-primary transition-colors text-sm font-medium">Portfólio</a>
+                    <a href="#habilidades" data-i18n="nav-habilidades"
+                        class="hover:text-primary transition-colors text-sm font-medium">Habilidades</a>
+                    <a href="#contato" data-i18n="nav-contato"
+                        class="hover:text-primary transition-colors text-sm font-medium">Contato</a>
                 </div>
 
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-primary transition-colors">Início</a>
-                    <a href="#sobre" class="hover:text-primary transition-colors">Sobre</a>
-                    <a href="#experiencia" class="hover:text-primary transition-colors">Experiência</a>
-                    <a href="#formacao" class="hover:text-primary transition-colors">Formação</a>
-                    <a href="#habilidades" class="hover:text-primary transition-colors">Habilidades</a>
-                    <a href="#portfolio" class="hover:text-primary transition-colors">Portfólio</a>
-                    <a href="#contato" class="hover:text-primary transition-colors">Contato</a>
-                </div>
+                <!-- Botões direita -->
+                <div class="flex items-center gap-3">
+                    <!-- Botão de idioma -->
+                    <button id="lang-toggle" onclick="toggleLanguage()"
+                        class="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-semibold hover:bg-primary/20 transition-colors flex items-center">
+                        <i class="fas fa-globe mr-2"></i>EN
+                    </button>
 
-                <div class="flex items-center space-x-4">
+                    <!-- Tema -->
                     <button onclick="toggleTheme()"
                         class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
                         <i class="fas fa-sun hidden dark:block"></i>
                         <i class="fas fa-moon block dark:hidden"></i>
                     </button>
+
+                    <!-- Menu mobile -->
                     <button onclick="toggleMenu()" class="md:hidden p-2">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -113,6 +140,10 @@
     <section id="home" class="relative min-h-screen flex items-center justify-center pt-16 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="reveal active">
+
+                <div class="inline-block mb-4 px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20" data-i18n="hero-badge">
+                    <i class="fas fa-graduation-cap mr-2"></i>Cursando Análise e Desenvolvimento de Sistemas
+                </div>
 
                 <!-- TÍTULO PRINCIPAL -->
                 <div class="mb-8 relative">
@@ -153,7 +184,6 @@
                         técnica</span>
                     com desenvolvimento de soluções digitais completas.
                 </p>
-
 
             </div>
         </div>
@@ -261,7 +291,6 @@
                         </p>
                     </div>
 
-                    <!-- Skills -->
                     <!-- Skills - Centralizado -->
                     <div class="flex flex-wrap justify-center gap-2 mb-8">
                         <span
@@ -329,8 +358,6 @@
                         </a>
                     </div>
 
-
-
                     <div class="mt-12 flex justify-center gap-6">
                         <a href="https://www.linkedin.com/in/romulo-pereira-de-souza-neto/" target="_blank"
                             class="w-12 h-12 rounded-full glass flex items-center justify-center text-xl hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110">
@@ -350,15 +377,11 @@
                         </a>
                     </div>
 
-
                 </div>
             </div>
         </div>
-        </div>
-        </div>
     </section>
 
-    <!-- Experiência Timeline -->
     <!-- Experiência Timeline -->
     <section id="experiencia" class="py-20 bg-gray-100 dark:bg-dark z-10 relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -647,25 +670,6 @@
         </div>
     </section>
 
-
-
-    <!-- Modal -->
-    <div id="add-project-modal"
-        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="glass rounded-2xl p-8 max-w-md w-full transform scale-95 opacity-0 transition-all duration-300"
-            id="modal-content">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold">Adicionar Novo Projeto</h3>
-                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700"><i
-                        class="fas fa-times text-xl"></i></button>
-            </div>
-            <p class="text-gray-600 mb-6">Edite o arquivo <code
-                    class="bg-gray-200 px-2 py-1 rounded text-sm">index.html</code> na seção Portfólio.</p>
-            <button onclick="closeModal()"
-                class="w-full py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">Entendi</button>
-        </div>
-    </div>
-
     <!-- Habilidades -->
     <section id="habilidades" class="py-20 bg-gray-100 dark:bg-dark z-10 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -753,8 +757,6 @@
                             class="fas fa-comments text-primary"></i><span>Comunicação</span></div>
                 </div>
             </div>
-
-
         </div>
     </section>
 
@@ -1053,17 +1055,35 @@
                     </div>
                 </div>
 
-
-                <!-- CTA GitHub -->
-                <div class="mt-16 text-center reveal">
-                    <a href="https://github.com/Rnetoo" target="_blank"
-                        class="inline-flex items-center space-x-3 px-8 py-4 bg-gray-900 dark:bg-gray-800 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all">
-                        <i class="fab fa-github text-2xl"></i>
-                        <span>Ver todos no GitHub</span>
-                    </a>
-                </div>
             </div>
+
+            <!-- CTA GitHub -->
+            <div class="mt-16 text-center reveal">
+                <a href="https://github.com/Rnetoo" target="_blank"
+                    class="inline-flex items-center space-x-3 px-8 py-4 bg-gray-900 dark:bg-gray-800 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all">
+                    <i class="fab fa-github text-2xl"></i>
+                    <span>Ver todos no GitHub</span>
+                </a>
+            </div>
+        </div>
     </section>
+
+    <!-- Modal -->
+    <div id="add-project-modal"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="glass rounded-2xl p-8 max-w-md w-full transform scale-95 opacity-0 transition-all duration-300"
+            id="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Adicionar Novo Projeto</h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700"><i
+                        class="fas fa-times text-xl"></i></button>
+            </div>
+            <p class="text-gray-600 mb-6">Edite o arquivo <code
+                    class="bg-gray-200 px-2 py-1 rounded text-sm">index.html</code> na seção Portfólio.</p>
+            <button onclick="closeModal()"
+                class="w-full py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">Entendi</button>
+        </div>
+    </div>
 
     <!-- Contato -->
     <section id="contato" class="py-20 z-10 relative">
@@ -1103,12 +1123,10 @@
                     </div>
                 </div>
 
-
                 <!-- Formulário com Formspree -->
                 <div class="glass rounded-2xl p-8">
                     <h3 class="text-2xl font-bold mb-6">Envie uma mensagem</h3>
 
-                    <!-- SUBSTITUA XXXXXX pelo seu código do Formspree -->
                     <form action="https://formspree.io/f/xaqdowby" method="POST" class="space-y-4">
 
                         <div>
@@ -1120,7 +1138,6 @@
 
                         <div>
                             <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Email</label>
-                            <!-- "email" é obrigatório para o Formspree responder -->
                             <input type="email" name="email" required
                                 class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-dark/50 border border-gray-300 dark:border-gray-700 focus:border-primary focus:outline-none transition-colors"
                                 placeholder="seu@email.com">
@@ -1145,13 +1162,8 @@
                                 placeholder="Sua mensagem..."></textarea>
                         </div>
 
-                        <!-- Configurações opcionais -->
                         <input type="hidden" name="_subject" value="Novo contato do portfólio!">
                         <input type="hidden" name="_replyto" value="romulo.psnw@gmail.com">
-
-                        <!-- Página de agradecimento (opcional) -->
-                        <input type="hidden" name="_next" value="https://rnetoo.github.io/obrigado.html">
-
                         <input type="hidden" name="_next" value="https://rnetoo.github.io/obrigado.html">
 
                         <button type="submit"
@@ -1167,10 +1179,6 @@
                             class="text-primary hover:underline">romulo.psnw@gmail.com</a>
                     </p>
                 </div>
-
-
-
-
             </div>
         </div>
     </section>
@@ -1180,15 +1188,13 @@
         class="py-12 text-center text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-dark">
         <div class="max-w-7xl mx-auto px-4">
 
-            <!-- Logo centralizado - Linha separada -->
+            <!-- Logo centralizado -->
             <div class="flex justify-center items-center mb-8">
                 <a href="#home" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                    <!-- Ícone -->
                     <div
                         class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold font-mono text-sm shadow-lg hover:shadow-primary/40 transition-all duration-300 hover:scale-105">
                         <span>&lt;R.N/&gt;</span>
                     </div>
-                    <!-- Texto -->
                     <span class="text-xl font-bold gradient-text">Rômulo.Neto</span>
                 </a>
             </div>
@@ -1228,6 +1234,7 @@
     <script src="js/typing.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>
